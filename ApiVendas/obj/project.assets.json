@@ -2193,11 +2193,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Dev\\ApiVendas\\ApiVendas.csproj",
+      "projectUniqueName": "C:\\Dev\\Pottencial\\tech-test-payment-api\\ApiVendas\\ApiVendas.csproj",
       "projectName": "ApiVendas",
-      "projectPath": "C:\\Dev\\ApiVendas\\ApiVendas.csproj",
+      "projectPath": "C:\\Dev\\Pottencial\\tech-test-payment-api\\ApiVendas\\ApiVendas.csproj",
       "packagesPath": "C:\\Users\\oktug\\.nuget\\packages\\",
-      "outputPath": "C:\\Dev\\ApiVendas\\obj\\",
+      "outputPath": "C:\\Dev\\Pottencial\\tech-test-payment-api\\ApiVendas\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\oktug\\AppData\\Roaming\\NuGet\\NuGet.Config"

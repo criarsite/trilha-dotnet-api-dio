@@ -70,5 +70,30 @@ namespace ApiVendas.src.Controllers
         {
             return _context.Vendedores.Any(e => e.Id == id);
         }
+
+
+        [HttpPut("{id}")]
+        public IActionResult Atualizar(int id, Vendedor vendedor)
+        {
+            var vendedorBd = _context.Vendedores.Find(id);
+            if (id == null) return NotFound();
+            vendedorBd.Nome = vendedor.Nome;
+            vendedorBd.Cpf = vendedor.Cpf;
+            vendedorBd.Telefone = vendedor.Telefone;
+            _context.Vendedores.Update(vendedorBd);
+            _context.SaveChanges();
+            return Ok(vendedorBd);
+
+        }
+
+        [HttpDelete("{id}")]
+        public IActionResult Deletar(int id)
+        {
+            var vendedorBd = _context.Vendedores.Find(id);
+            if (vendedorBd == null) return NotFound();
+            _context.Vendedores.Remove(vendedorBd);
+            _context.SaveChanges();
+            return NoContent();
+        }
     }
 }

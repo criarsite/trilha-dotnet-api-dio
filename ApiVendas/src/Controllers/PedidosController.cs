@@ -99,9 +99,10 @@ namespace ApiVendas.src.Controllers
                 {
                     return BadRequest(ex.ToString());
                 }
+                
             }
 
-            return NoContent();
+            //return NoContent() ;
         }
 
 
@@ -136,12 +137,22 @@ namespace ApiVendas.src.Controllers
                 return BadRequest(ex.ToString());
             }
 
-        }
+         }
 
 
         private bool PedidoExists(int id)
         {
             return _context.Pedidos.Any(e => e.Id == id);
+        }
+
+         [HttpDelete("{id}")]
+        public IActionResult Deletar(int id)
+        {
+            var pedidoBd = _context.Pedidos.Find(id);
+            if (pedidoBd == null) return NotFound();
+            _context.Pedidos.Remove(pedidoBd);
+            _context.SaveChanges();
+            return NoContent();
         }
     }
 }
